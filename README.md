@@ -68,7 +68,7 @@ Testing of the project is implemented using pytest. In order to test, simply run
 
 ## The results
 
-Solving board #38 is implemented as part of the pytest. The resuts were:
+Solving board #38 is implemented as part of the pytest. The results were:
 
 ```
 Minimized the move_count
@@ -86,3 +86,14 @@ presented at the backside of the original card, where the move length was 84.
 
 Minimizing the number of car swaps, a total of 51 cars needed moving, which is the same
 as in the original solution.
+
+## Further work
+
+If time permits, there is a fair amount of improvements that
+could be done to the code, for instance:
+
+* Adding inline documentation to functions and classes
+* Adding more tests
+* Adding proper logging support
+* Optimizing run-time
+* Adding graphical display of solutions
