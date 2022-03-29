@@ -1,12 +1,6 @@
-from calendar import c
-from tabnanny import check
-from this import d
-from tkinter import HORIZONTAL
-from xmlrpc.client import Boolean
 import numpy as np
 from enum import Enum
 from copy import deepcopy
-from typing import Tuple
 from dataclasses import dataclass
 from bisect import insort
 
@@ -234,7 +228,7 @@ class Board:
                     next_boards.append(b)
         return next_boards
 
-    def __lt__(self, other) -> Boolean:
+    def __lt__(self, other) -> bool:
         """Compare two Boards, based on move-count first, car-swaps secondly"""
         if self.move_count == other.move_count:
             return self.car_swaps < other.car_swaps
@@ -266,14 +260,6 @@ class SortedBoards:
 
     def __len__(self) -> int:
         return len(self.boards)
-
-
-#  2  3  4  4  5  0
-#  2  3  6  0  5  7
-#  2  0  6  1  1  7
-#  8  8  8  9  0  7
-#  0  0 10  9 11 11
-# 12 12 10 13 13  0
 
 
 def get_cars(board: np.ndarray):
@@ -387,17 +373,6 @@ if __name__ == "__main__":
         [  0,  0, 10,  9, 11, 11],
         [ 12, 12, 10, 13, 13,  0],
     ])
-    # fmt: on
-
-    # fmt: off
-    # board_array = np.array([
-    #     [  0,  4,  4,  0,  0,  0],
-    #     [  0,  0,  0,  0,  0,  7],
-    #     [  0,  0,  5,  1,  1,  7],
-    #     [  0,  0,  5,  9,  0,  7],
-    #     [  0,  0,  0,  9,  0,  0],
-    #     [ 12, 12,  0, 13, 13,  0],
-    # ])
     # fmt: on
 
     s = Solver(Board.board_from_numpy(board_array))

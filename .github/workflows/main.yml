@@ -34,3 +34,6 @@ jobs:
 
       - name: Run unit tests
         run: python -m pytest .
+
+      - name: Run command-line
+        run: python rushhour.py

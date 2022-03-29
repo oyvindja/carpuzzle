@@ -1,4 +1,4 @@
-from carpuzzle import (
+from rushhour import (
     Board,
     Solver,
     board_string_to_array,
