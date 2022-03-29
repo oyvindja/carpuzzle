@@ -1,6 +1,6 @@
 # Rush Hour
 
-# Introduciton
+# Introduction
 
 Rush Hour is a sliding block logic game, where the task
 is to move cars for the red car to exit the board.
@@ -68,4 +68,21 @@ Testing of the project is implemented using pytest. In order to test, simply run
 
 ## The results
 
-Solving board #38 is implemented as part of the pytest. 
+Solving board #38 is implemented as part of the pytest. The resuts were:
+
+```
+Minimized the move_count
+Found solution with 83 moves, swapping car 60 times, total move distance 83
+Have looked at total 4780 board positions
+
+Minimized the car_swaps
+Found solution with 51 moves, swapping car 51 times, total move distance 83
+Have looked at total 4780 board positions
+```
+
+So the total number of possible board positions is 4780. Regardless of the minimize setting,
+the best possible number of squares moved is 83, which is one lower than the solution
+presented at the backside of the original card, where the move length was 84.
+
+Minimizing the number of car swaps, a total of 51 cars needed moving, which is the same
+as in the original solution.
